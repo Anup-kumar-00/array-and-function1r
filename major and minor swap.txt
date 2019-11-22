@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+    int c,r,s,i,j,flag=0,t;
+    scanf("%d %d",&c,&r);
+    int a[c][r],b[c][r];
+    for(i=0;i<c;i++)
+    {
+        for(j=0;j<r;j++)
+        scanf("%d",&a[i][j]);
+    }
+
+    for(i=0;i<c;i++)
+    {
+        for(j=0;j<r;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    int n=c-1;
+    for(i=0;i<c;i++)
+    {
+        t=a[i][i];
+        a[i][i]=a[i][n];
+        a[i][n]=t;
+        n--;
+    }
+    for(i=0;i<c;i++)
+    {
+        for(j=0;j<r;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+
+}
+}
+
