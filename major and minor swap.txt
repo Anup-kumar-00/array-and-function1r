@@ -1,3 +1,4 @@
+//Major and minor swap
 #include<stdio.h>
 int main()
 {
